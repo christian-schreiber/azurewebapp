@@ -11,13 +11,17 @@ function Forms() {
         const lastname = lastnameInput.value;
         const email = emailInput.value;
 
-        fetch("https://prod-227.westeurope.logic.azure.com:443/workflows/b7fd05ceb9de4f62806f3e2a87cde63d/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vqF1SPQQu6VFMhKA5idOpyNPmP75H33HVCof19kp01Y", {
+        fetch("https://azuresaturdayapi.azure-api.net/upload", {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Ocp-Apim-Subscription-Key': '2c385dec383e419da10384e942d320b2',
+              },
             body: {
                 "name": lastname,
                 "firstname": firstname,
                 "email": email
-            },
+            },          
           })
             .then((response) => response.json())
             .then((data) => {
