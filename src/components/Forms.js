@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form() {
+function Forms() {
     function sendForm() {
         const firstnameInput = document.getElementById("firstname");
         const lastnameInput = document.getElementById("lastname");
@@ -42,4 +42,4 @@ function Form() {
     );
 }
 
-export default Form;
+export default Forms;
