@@ -16,8 +16,8 @@ function Forms() {
     fetch("https://azuresaturdayapi.azure-api.net/upload", {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Ocp-Apim-Subscription-Key': '2c385dec383e419da10384e942d320b2',
+        'Content-Type': 'application/json'
+        
       },
       body: JSON.stringify({ // Convert the body to JSON
         "name": lastname,
